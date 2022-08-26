@@ -56,10 +56,6 @@
                 body: "Thank you for clicking", direction: "append", toastClass: "text-bg-success", closeButtonClass: "btn-close-white"
             })
         })
-        notification.element.querySelector(".btn-outline-secondary").addEventListener("click", () => {
-            const alert = bootstrap.Alert.getOrCreateInstance(notification.element)
-            alert.close()
-        })
     })
     document.getElementById("button-show-danger").addEventListener("click", function () {
         bootstrap.showToast({

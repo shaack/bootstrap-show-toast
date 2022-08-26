@@ -25,7 +25,7 @@
             animation: true, // apply a CSS fade transition to the toast
             delay: 5000, //	delay in milliseconds before hiding the toast, delay of 0 means infinite
             position: "top-0 end-0", // top right
-            direction: "prepend", // or "append", the stack direction
+            direction: "append", // or "append", the stack direction
             ariaLive: "assertive"
         }
         this.containerId = "bootstrap-show-toast-container-" + this.props.position.replace(" ", "_")
@@ -70,16 +70,14 @@
         } else {
             this.container.append(toastElement)
         }
-        toastElement.classList.add("show")
-        console.log(this.props.animation, this.props.delay > 0, this.props.delay)
-        /*
         this.toast = new bootstrap.Toast(toastElement, {
             animation: this.props.animation,
             autohide: this.props.delay > 0,
             delay: this.props.delay
 
         })
-        */
+        this.toast.show()
+
         return toastElement
     }
 
