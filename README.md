@@ -16,32 +16,35 @@ npm install bootstrap-show-toast
 
 ## Usage
 
-```html
-<script src="./node_modules/bootstrap-show-toast/src/bootstrap-show-toast.js"></script>
-<script>
-    // simple example
-    $("#button-show-simple").click(function () {
-        $.showNotification({body: "Hello Toast!"})
+```js
+// simple example
+bootstrap.showToast({body: "Hello Toast!"})
+
+// type danger
+bootstrap.showToast({
+    header: "Alert",
+    body: "Red Alert!",
+    toastClass: "text-bg-danger"
+})
+
+// more complex toast with header and buttons
+const toast = bootstrap.showToast({
+    header: "Information",
+    headerSmall: "just now",
+    body: "<p>This notification has a headline and more text than the previous one.</p><div><button class='btn btn-primary me-1 btn-sm'>Click me</button><button class='btn btn-secondary btn-sm' data-bs-dismiss='toast'>Close</button></div>",
+    type: "info",
+    delay: 20000
+})
+toast.element.querySelector(".btn-primary").addEventListener("click", () => {
+    bootstrap.showToast({
+        body: "Thank you for clicking", direction: "append", toastClass: "text-bg-success", closeButtonClass: "btn-close-white"
     })
-    // type info and more complex body
-    $("#button-show-info").click(function () {
-        $.showNotification({
-            body: "<h3>For your Info</h3>This notification has a title and a body and more text than the previous one.", type: "info"
-        })
-    })
-    // type danger
-    $("#button-show-danger").click(function () {
-        $.showNotification({
-            body: "Danger!", type: "danger"
-        })
-    })
-    // type secondary and sticky
-    $("#button-show-sticky").click(function () {
-        $.showNotification({
-            body: "This notification will stay", type: "secondary", duration: 0
-        })
-    })
-</script>
+})
+
+// type secondary and sticky
+bootstrap.showToast({
+    body: "This notification will stay", toastClass: "text-bg-secondary", closeButtonClass: "btn-close-white", delay: 0
+})
 ```
 
 ## Props (defaults)
