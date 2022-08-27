@@ -1,6 +1,6 @@
 /**
  * Author and copyright: Stefan Haack (https://shaack.com)
- * Repository: https://github.com/shaack/bootstrap-show-notification
+ * Repository: https://github.com/shaack/bootstrap-show-toast
  * License: MIT, see file 'LICENSE'
  */
 ;(function (bootstrap) {

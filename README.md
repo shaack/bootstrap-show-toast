@@ -17,7 +17,7 @@ npm install bootstrap-show-toast
 ## Usage
 
 ```html
-<script src="./node_modules/bootstrap-show-notification/src/bootstrap-show-toast.js"></script>
+<script src="./node_modules/bootstrap-show-toast/src/bootstrap-show-toast.js"></script>
 <script>
     // simple example
     $("#button-show-simple").click(function () {
