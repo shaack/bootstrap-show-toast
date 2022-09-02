@@ -63,7 +63,7 @@ this.props = {
     animation: true, // apply a CSS fade transition to the toast
     delay: 5000, //	delay in milliseconds before hiding the toast, set delay to `Infinity` to make it sticky
     position: "top-0 end-0", // top right
-    direction: "append", // or "append", the stack direction
+    direction: "append", // or "prepend", the stack direction
     ariaLive: "assertive"
 }
 ```
