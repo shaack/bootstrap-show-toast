@@ -53,10 +53,18 @@ bootstrap.showToast({
 
 ```js
 this.props = {
-    body: "", // the text, shown
-    type: "primary", // the appearance
-    duration: 5500, // duration till auto-hide, set to `0` to disable auto-hide
-    maxWidth: "520px" // the notification maxWidth
+    header: "", // the header text
+    headerSmall: "", // additional text in the header, aligns right
+    body: "", // the body text of the toast
+    closeButton: true, // show a close button
+    closeButtonLabel: "close", // the label of the close button
+    closeButtonClass: "", // set to "btn-close-white" for dark backgrounds
+    toastClass: "", // the appearance
+    animation: true, // apply a CSS fade transition to the toast
+    delay: 5000, //	delay in milliseconds before hiding the toast, set delay to `Infinity` to make it sticky
+    position: "top-0 end-0", // top right
+    direction: "append", // or "append", the stack direction
+    ariaLive: "assertive"
 }
 ```
 
