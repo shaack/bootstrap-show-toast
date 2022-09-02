@@ -32,18 +32,20 @@ const toast = bootstrap.showToast({
     header: "Information",
     headerSmall: "just now",
     body: "<p>This notification has a headline and more text than the previous one.</p><div><button class='btn btn-primary me-1 btn-sm'>Click me</button><button class='btn btn-secondary btn-sm' data-bs-dismiss='toast'>Close</button></div>",
-    type: "info",
     delay: 20000
 })
 toast.element.querySelector(".btn-primary").addEventListener("click", () => {
     bootstrap.showToast({
-        body: "Thank you for clicking", direction: "append", toastClass: "text-bg-success", closeButtonClass: "btn-close-white"
+        body: "Thank you for clicking", direction: "append", 
+        toastClass: "text-bg-success", closeButtonClass: "btn-close-white"
     })
 })
 
 // type secondary and sticky
 bootstrap.showToast({
-    body: "This notification will stay", toastClass: "text-bg-secondary", closeButtonClass: "btn-close-white", delay: 0
+    body: "This notification will stay", 
+    toastClass: "text-bg-secondary", closeButtonClass: "btn-close-white", 
+    delay: Infinity // delay of `Infinity` to make it sticky
 })
 ```
 

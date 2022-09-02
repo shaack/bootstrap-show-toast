@@ -23,7 +23,7 @@
             closeButtonClass: "", // set to "btn-close-white" for dark backgrounds
             toastClass: "", // the appearance
             animation: true, // apply a CSS fade transition to the toast
-            delay: 5000, //	delay in milliseconds before hiding the toast, delay of 0 means infinite
+            delay: 5000, //	delay in milliseconds before hiding the toast, set delay to `Infinity` to make it sticky
             position: "top-0 end-0", // top right
             direction: "append", // or "append", the stack direction
             ariaLive: "assertive"
@@ -72,7 +72,7 @@
         }
         this.toast = new bootstrap.Toast(toastElement, {
             animation: this.props.animation,
-            autohide: this.props.delay > 0,
+            autohide: this.props.delay > 0 && this.props.delay !== Infinity, // TODO remove 0 for infinity 2022-09-02
             delay: this.props.delay
 
         })
