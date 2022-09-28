@@ -26,6 +26,7 @@
             delay: 5000, //	delay in milliseconds before hiding the toast, set delay to `Infinity` to make it sticky
             position: "top-0 end-0", // top right
             direction: "append", // or "prepend", the stack direction
+            zIndex: 100, // the z-index of the container
             ariaLive: "assertive"
         }
         this.containerId = "bootstrap-show-toast-container-" + this.props.position.replace(" ", "_")
@@ -58,6 +59,7 @@
             this.container = document.createElement("div")
             this.container.id = this.containerId
             this.container.setAttribute("class", "toast-container position-fixed p-3 " + this.props.position)
+            this.container.style.zIndex = "" + this.props.zIndex
             document.body.appendChild(this.container)
         }
         this.element = createElement(this.template)
