@@ -26,7 +26,7 @@
             delay: 5000, //	delay in milliseconds before hiding the toast, set delay to `Infinity` to make it sticky
             position: "top-0 end-0", // top right
             direction: "append", // or "prepend", the stack direction
-            zIndex: 100, // the z-index of the container
+            zIndex: 1030, // the z-index of the container
             ariaLive: "assertive"
         }
         this.containerId = "bootstrap-show-toast-container-" + this.props.position.replace(" ", "_")
