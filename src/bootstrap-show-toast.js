@@ -26,13 +26,16 @@
             delay: 5000, //	delay in milliseconds before hiding the toast, set delay to `Infinity` to make it sticky
             position: "top-0 end-0", // top right
             direction: "append", // or "prepend", the stack direction
-            zIndex: 1030, // the z-index of the container
+            zIndex: undefined, // the z-index of the container (DEPRECATED)
             ariaLive: "assertive"
         }
         this.containerId = "bootstrap-show-toast-container-" + this.props.position.replace(" ", "_")
         for (let prop in props) {
             // noinspection JSUnfilteredForInLoop
             this.props[prop] = props[prop]
+        }
+        if(this.props.zIndex) {
+            console.warn("bootstrap-show-toast: The zIndex property is deprecated, use the bootstrap variables instead.")
         }
         const cssClass = ("toast " + this.props.toastClass).trim()
         let toastHeader = ""
