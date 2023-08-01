@@ -38,8 +38,9 @@
     </div>
 </section>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-<script src="./src/bootstrap-show-toast.js"></script>
-<script>
+<script type="module">
+    import "./src/bootstrap-show-toast.js"
+
     document.getElementById("button-show-simple").addEventListener("click", function () {
         bootstrap.showToast({body: "Hello Toast!"})
     })
