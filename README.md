@@ -4,7 +4,7 @@ A Bootstrap 5 plugin for [Bootstrap Toasts](https://getbootstrap.com/docs/5.3/co
 
 ## References
 
-- [Demo pages with usage examples](https://shaack.com/projekte/bootstrap-show-toast)
+- [Demo page](https://shaack.com/projekte/bootstrap-show-toast)
 - [GitHub repository](https://github.com/shaack/bootstrap-show-toast)
 - [npm package](https://www.npmjs.com/package/bootstrap-show-toast)
 
