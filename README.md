@@ -1,14 +1,14 @@
 # bootstrap-show-toast
 
-A Bootstrap 5 plugin for [Bootstrap Toasts](https://getbootstrap.com/docs/5.2/components/toasts/), to show them with pure JS, no HTML needed.
+A Bootstrap 5 plugin for [Bootstrap Toasts](https://getbootstrap.com/docs/5.3/components/toasts/), to show them with pure JS, no HTML needed.
 
-## Try it
+## References
 
-- [Demo Page](https://shaack.com/projekte/bootstrap-show-toast/)
+- [Demo pages with usage examples](https://shaack.com/projekte/bootstrap-show-toast)
+- [GitHub repository](https://github.com/shaack/bootstrap-show-toast)
+- [npm package](https://www.npmjs.com/package/bootstrap-show-toast)
 
 ## Installation
-
-- [npm package](https://www.npmjs.com/package/bootstrap-show-toast)
 
 ```sh
 npm install bootstrap-show-toast
@@ -68,10 +68,7 @@ this.props = {
 }
 ```
 
-## Documentation
+---
 
-- [Repository and documentation](https://github.com/shaack/bootstrap-show-toast)
-
-## More Bootstrap extensions
-
-Check out my [further Bootstrap extensions](https://github.com/shaack?tab=repositories&q=bootstrap&type=&language=&sort=stargazers)
+Find more high quality modules from [shaack.com](https://shaack.com)
+on [our projects page](https://shaack.com/works).
