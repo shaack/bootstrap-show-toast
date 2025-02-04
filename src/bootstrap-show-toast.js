@@ -79,8 +79,10 @@
             animation: this.props.animation,
             autohide: this.props.delay > 0 && this.props.delay !== Infinity, // TODO remove 0 for infinity 2022-09-02
             delay: this.props.delay
-
         })
+        if (this.props.destroyOnClose) {
+            toastElement.addEventListener('hidden.bs.toast', toastElement.remove)
+        }
         this.toast.show()
 
         return toastElement

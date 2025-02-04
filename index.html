@@ -42,19 +42,26 @@
     import "./src/bootstrap-show-toast.js"
 
     document.getElementById("button-show-simple").addEventListener("click", function () {
-        bootstrap.showToast({body: "Hello Toast!"})
+        bootstrap.showToast({
+            body: "Hello Toast!",
+            destroyOnClose: true
+        })
     })
     document.getElementById("button-show-info").addEventListener("click", function () {
         const toast = bootstrap.showToast({
             header: "Information",
             headerSmall: "just now",
             body: "<p>This notification has a headline and more text than the previous one.</p><div><button class='btn btn-primary me-1 btn-sm'>Click me</button><button class='btn btn-secondary btn-sm' data-bs-dismiss='toast'>Close</button></div>",
-            delay: 20000
+            delay: 20000,
+            destroyOnClose: true
         })
         toast.element.querySelector(".btn-primary").addEventListener("click", () => {
             bootstrap.showToast({
-                body: "Thank you for clicking", direction: "append",
-                toastClass: "text-bg-success", closeButtonClass: "btn-close-white"
+                body: "Thank you for clicking",
+                direction: "append",
+                toastClass: "text-bg-success",
+                closeButtonClass: "btn-close-white",
+                destroyOnClose: true
             })
         })
     })
@@ -62,12 +69,17 @@
         bootstrap.showToast({
             header: "Alert",
             body: "Red Alert!",
-            toastClass: "text-bg-danger"
+            toastClass: "text-bg-danger",
+            destroyOnClose: true
         })
     })
     document.getElementById("button-show-sticky").addEventListener("click", function () {
         bootstrap.showToast({
-            body: "This notification will stay", toastClass: "text-bg-secondary", closeButtonClass: "btn-close-white", delay: Infinity
+            body: "This notification will stay",
+            toastClass: "text-bg-secondary",
+            closeButtonClass: "btn-close-white",
+            delay: Infinity,
+            destroyOnClose: true
         })
     })
 </script>

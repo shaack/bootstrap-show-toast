@@ -64,7 +64,8 @@ this.props = {
     delay: 5000, //	delay in milliseconds before hiding the toast, set delay to `Infinity` to make it sticky
     position: "top-0 end-0", // top right
     direction: "append", // or "prepend", the stack direction
-    ariaLive: "assertive"
+    ariaLive: "assertive",
+    destroyOnClose: false // set to true to remove HTML from the DOM after dismissal
 }
 ```
 
