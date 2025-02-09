@@ -77,12 +77,13 @@
         }
         this.toast = new bootstrap.Toast(toastElement, {
             animation: this.props.animation,
-            autohide: this.props.delay > 0 && this.props.delay !== Infinity, // TODO remove 0 for infinity 2022-09-02
+            autohide: this.props.delay > 0 && this.props.delay !== Infinity,
             delay: this.props.delay
 
         })
         this.toast.show()
-
+        // remove on close, see https://github.com/shaack/bootstrap-show-toast/pull/3
+        toastElement.addEventListener('hidden.bs.toast', toastElement.remove)
         return toastElement
     }
 
