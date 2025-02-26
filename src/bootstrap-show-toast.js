@@ -77,7 +77,12 @@
         })
         this.toast.show()
         // remove on close, see https://github.com/shaack/bootstrap-show-toast/pull/3
-        toastElement.addEventListener('hidden.bs.toast', toastElement.remove)
+        toastElement.addEventListener('hidden.bs.toast', () => {
+            toastElement.remove()
+            if (this.container.children.length === 0) {
+                this.container.remove()
+            }
+        })
         return toastElement
     }
 
