@@ -19,23 +19,18 @@
             headerSmall: "", // additional text in the header, aligns right
             body: "", // the body text of the toast
             closeButton: true, // show a close button
-            closeButtonLabel: "close", // the label of the close button
-            closeButtonClass: "", // set to "btn-close-white" for dark backgrounds
-            toastClass: "", // the appearance
+            closeButtonLabel: "close", // the label of the close button "x"
+            closeButtonClass: "", // e.g. set to "btn-close-white" for a white "x" on a dark background
+            toastClass: "", // the class of the toast, may be "text-bg-danger", see the bootstrap documentation
             animation: true, // apply a CSS fade transition to the toast
             delay: 5000, //	delay in milliseconds before hiding the toast, set delay to `Infinity` to make it sticky
             position: "top-0 end-0", // top right
             direction: "append", // or "prepend", the stack direction
-            zIndex: undefined, // the z-index of the container (DEPRECATED)
-            ariaLive: "assertive"
+            ariaLive: "assertive" // the "aria-live" attribute, for accessibility
         }
         this.containerId = "bootstrap-show-toast-container-" + this.props.position.replace(" ", "_")
         for (let prop in props) {
-            // noinspection JSUnfilteredForInLoop
             this.props[prop] = props[prop]
-        }
-        if(this.props.zIndex) {
-            console.warn("bootstrap-show-toast: The zIndex property is deprecated, use the bootstrap variables instead.")
         }
         const cssClass = ("toast " + this.props.toastClass).trim()
         let toastHeader = ""
@@ -62,7 +57,6 @@
             this.container = document.createElement("div")
             this.container.id = this.containerId
             this.container.setAttribute("class", "toast-container position-fixed p-3 " + this.props.position)
-            this.container.style.zIndex = "" + this.props.zIndex
             document.body.appendChild(this.container)
         }
         this.element = createElement(this.template)
@@ -77,7 +71,7 @@
         }
         this.toast = new bootstrap.Toast(toastElement, {
             animation: this.props.animation,
-            autohide: this.props.delay > 0 && this.props.delay !== Infinity,
+            autohide: this.props.delay !== Infinity,
             delay: this.props.delay
 
         })
