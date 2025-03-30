@@ -28,10 +28,10 @@
             direction: "append", // or "prepend", the stack direction
             ariaLive: "assertive" // the "aria-live" attribute, for accessibility
         }
-        this.containerId = "bootstrap-show-toast-container-" + this.props.position.replace(" ", "_")
         for (let prop in props) {
             this.props[prop] = props[prop]
         }
+        this.containerId = "bootstrap-show-toast-container-" + this.props.position.replace(" ", "_")
         const cssClass = ("toast " + this.props.toastClass).trim()
         let toastHeader = ""
         const showHeader = this.props.header || this.props.headerSmall
