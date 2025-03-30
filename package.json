@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-show-toast",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "A Bootstrap 5 plugin to show toasts with pure JavaScript",
   "main": "index.js",
   "scripts": {
