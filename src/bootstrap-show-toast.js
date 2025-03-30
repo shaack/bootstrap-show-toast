@@ -31,7 +31,7 @@
         for (let prop in props) {
             this.props[prop] = props[prop]
         }
-        this.containerId = "bootstrap-show-toast-container-" + this.props.position.replace(" ", "_")
+        this.containerId = "bootstrap-show-toast-container-" + this.props.position.replaceAll(" ", "_")
         const cssClass = ("toast " + this.props.toastClass).trim()
         let toastHeader = ""
         const showHeader = this.props.header || this.props.headerSmall
