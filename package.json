@@ -2,9 +2,9 @@
   "name": "bootstrap-show-toast",
   "version": "1.2.2",
   "description": "A Bootstrap 5 plugin to show toasts with pure JavaScript",
-  "main": "index.js",
+  "main": "src/bootstrap-show-toast.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "teevi"
   },
   "repository": {
     "type": "git",
@@ -12,12 +12,18 @@
   },
   "keywords": [
     "Bootstrap",
-    "HTML"
+    "Bootstrap 5",
+    "toast",
+    "notification",
+    "JavaScript"
   ],
   "author": "shaack.com",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/shaack/bootstrap-show-toast/issues"
   },
-  "homepage": "https://github.com/shaack/bootstrap-show-toast#readme"
+  "homepage": "https://github.com/shaack/bootstrap-show-toast#readme",
+  "devDependencies": {
+    "teevi": "^2.7.0"
+  }
 }
